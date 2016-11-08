@@ -7,7 +7,6 @@
 //
 
 #import "IDHomeCollectionViewController.h"
-#import "LabeledCollectionViewCell.h"
 
 @interface IDHomeCollectionViewController ()
 
@@ -15,21 +14,9 @@
 
 @implementation IDHomeCollectionViewController
 
-static NSString * const reuseIdentifier = @"IDCell";
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
-    [self.collectionView registerNib:[UINib nibWithNibName:@"LabeledCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
-
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
-    
-    // Do any additional setup after loading the view.
+   [self.navigationItem setTitle:@"my title"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,68 +24,30 @@ static NSString * const reuseIdentifier = @"IDCell";
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSArray*)categories{
+    return @[@"Top of the world", @"Angry", @"At peace", @"Thankful", @"Help me", @"Confused", @"Worried", @"Confident"];
 }
-*/
 
-#pragma mark <UICollectionViewDataSource>
+- (NSArray*)images {
+    return @[@"panel1.png", @"panel2.png", @"panel3.png", @"panel4.png", @"panel5.png", @"panel6.png", @"panel8.png", @"panel7.png"];
+}
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
+- (NSArray*)songs {
+    return @[@[@"Top of the world - Imagine Dragons", @"Your Love is a Song - Switchfoot", @"Happy - Pharell Williams", @"Happy Day - Sister Act", @"Best Day of my Life - American Authors", @"Amazing Day - Chris Tomlin", @"Celebrate - Kool and the Gang"], @[@"Jesus Loves Me"], @[@"The Precipice - The Classic Crime"], @[@"40 - U2"], @[@"Help me"], @[@"Life is Confusing"], @[@"Don't Worry, Be Happy"], @[@"The Precipice - The Classic Crime"]];
+}
+
+
+- (NSInteger)numberOfSections {
     return 4;
 }
 
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
+- (NSInteger)numberOfItems {
     return 2;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    LabeledCollectionViewCell *cell = (LabeledCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    cell.categoryLabel.text = @"Top of the World";
-    
-    // Configure the cell
-    
-    return cell;
+- (NSString*)titleText {
+    return @"What's your state of mind";
 }
 
-#pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end

@@ -10,6 +10,7 @@
 
 @interface LabeledCollectionViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
+- (void)setImage:(NSString*)imagePath category:(NSString*)category;
+- (NSString*)cellText;
 
 @end

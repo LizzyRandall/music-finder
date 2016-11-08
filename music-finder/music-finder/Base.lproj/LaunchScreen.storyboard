@@ -16,7 +16,19 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landing" translatesAutoresizingMaskIntoConstraints="NO" id="yvW-Ye-4pR">
+                                <rect key="frame" x="-6" y="0.0" width="606" height="606"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.41960784313725491" green="0.70588235294117652" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yvW-Ye-4pR" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" constant="6" id="CYd-so-uub"/>
+                            <constraint firstItem="yvW-Ye-4pR" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" constant="6" id="UJi-N1-yRt"/>
+                            <constraint firstItem="yvW-Ye-4pR" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="3" id="UjZ-1f-scY"/>
+                            <constraint firstItem="yvW-Ye-4pR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-3" id="d4g-mr-PRo"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +36,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="landing" width="802" height="1378"/>
+    </resources>
 </document>
