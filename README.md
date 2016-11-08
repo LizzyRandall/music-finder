@@ -1,4 +1,3 @@
-# music-finder
 ![screen shot 2016-11-08 at 9 07 20 am](https://cloud.githubusercontent.com/assets/7630545/20102109/d0f09146-a592-11e6-9f3c-fd4f0efe2be5.png)
 
 LIFT - Music Finder for Indigitous Hackathon Orlando site
